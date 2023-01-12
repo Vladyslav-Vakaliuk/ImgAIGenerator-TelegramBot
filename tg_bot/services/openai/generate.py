@@ -22,8 +22,6 @@ image_dir = os.path.join(os.curdir, image_dir_name)
 if not os.path.isdir(image_dir):
     os.mkdir(image_dir)
 
-# print the directory to save to
-print(f"{image_dir=}")
 
 async def generate_image(prompt):
     """ Create an image """
@@ -35,12 +33,12 @@ async def generate_image(prompt):
     generation_response = openai.Image.create(
         prompt=prompt,
         n=1,
-        size="1024x1024",
+        size="512x512",
         response_format="url",
     )
 
     # print response
-    print(generation_response)
+    # print(generation_response)
 
     # save the image  
     i = 0
