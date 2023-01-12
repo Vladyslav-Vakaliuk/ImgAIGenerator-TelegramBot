@@ -97,7 +97,7 @@ async def async_main():
         logger.info("Got problems with database")
         pass
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+# asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 asyncio.run(async_main())
 
 class Database:
